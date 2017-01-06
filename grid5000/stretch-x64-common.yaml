@@ -1,0 +1,26 @@
+#==============================================================================
+# vim: softtabstop=2 shiftwidth=2 expandtab fenc=utf-8 cc=81 tw=80
+#==============================================================================
+#
+# DESCRIPTION: Debian 8 (Jessie) base system built with virtualbox.
+#
+#==============================================================================
+---
+extend: ./jessie-x64-common.yaml
+#== Global variables use by Kameleon engine and the steps
+global:
+  os_family: debian
+  os_release: stretch
+  release: stretch
+  variant: std
+  image_version: 2016122311
+  enable_backports: false
+  
+bootstrap:
+  - "@base"
+
+setup:
+  - "@base"
+
+export:
+  - "@base"
